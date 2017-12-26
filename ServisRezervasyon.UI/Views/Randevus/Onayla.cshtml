@@ -1,0 +1,90 @@
+﻿@model ServisRezervasyon.DAL.Data.Randevu
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Shared/_AdminLayout.cshtml";
+}
+<h3>Randevu Onaylanacaktır Onaylıyor Musunuz?</h3>
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Arac.Plaka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arac.Plaka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Musteri.Ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Musteri.Ad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Musteri.Soyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Musteri.Soyad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Musteri.Telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Musteri.Telefon)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Musteri.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Musteri.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Arac.Marka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arac.Marka)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Arac.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arac.Model)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Arac.ModelYili)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arac.ModelYili)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Arac.Aciklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arac.Aciklama)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Onayla" class="btn btn-primary" />
+        </div>
+    }
+</div>

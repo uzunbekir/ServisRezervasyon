@@ -1,0 +1,89 @@
+﻿@model IEnumerable<ServisRezervasyon.DAL.Data.Randevu>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Shared/_AdminLayout.cshtml";
+}
+<h2>Onaylanmış Randevular</h2>
+<link href="~/Content/Css/BootstrapCss.css" rel="stylesheet" />
+<link href="~/Content/Css/StyleSheet1.css" rel="stylesheet" />
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Arac.Plaka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Arac.Marka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Arac.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Arac.ModelYili)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Musteri.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Musteri.Soyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Musteri.Telefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Musteri.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Arac.Aciklama)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arac.Plaka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arac.Marka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arac.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arac.ModelYili)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Musteri.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Musteri.Soyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Musteri.Telefon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Musteri.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tarih)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arac.Aciklama)
+            </td>
+            
+        </tr>
+    }
+
+</table>
+<script src="~/Content/JQuery/BootstarpTable.js"></script>
+<script src="~/Content/JQuery/JavaScript.js"></script>
+<script src="~/Content/JQuery/JavaScript1.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
